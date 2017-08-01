@@ -1,0 +1,51 @@
+{
+	"manifest_version": 2,
+	"name": "Better DeepRoute.com",
+	"version": "2017.726.1",
+	"content_scripts": [
+		{
+		"matches": [
+			"http://deeproute.com/*?js=rosters*",
+			"http://deeproute.com/*?js=freeagents*",
+			"http://deeproute.com/*?js=trades*"
+			],
+		"js": ["jquery-3.2.1.min.js","embed_salary.js","replace_bday_with_age.js"]
+		},
+		{
+		"matches": [
+			"http://deeproute.com/*?js=freeagents*&posilook=offer*",
+			"http://deeproute.com/*?js=freeagents*&fawatch=y*"
+		],
+		"js": ["jquery-3.2.1.min.js", "sort_roster.js"]
+		},
+		{
+		"matches": ["http://deeproute.com/*?js=oneplayer*"],
+		"js": ["jquery-3.2.1.min.js", "oneplayer.js"]
+		},
+		{
+			"matches": ["http://deeproute.com/*?js=rosters*"],
+			"js": ["jquery-3.2.1.min.js", "undo_roster_cut.js"]
+		},
+		{
+		"matches": [
+			"http://deeproute.com/*?js=rosters*",
+			"http://deeproute.com/*?js=freeagents*",
+			"http://deeproute.com/*?js=trades*",
+			"http://deeproute.com/*?sel=rosterlook*",
+			"http://deeproute.com/*?js=mydraft*"
+		],
+		"js": ["jquery-3.2.1.min.js", "draft_cost.js"]
+		},
+		{
+		"matches": [
+			"http://deeproute.com/*?js=freeagents*"
+			],
+		"js": ["jquery-3.2.1.min.js","fix_FA_cap.js"]
+		},
+	   {
+		  "matches": ["http://deeproute.com/*js=loggerinc*"],
+		  "js": ["jquery-3.2.1.min.js","log2csv.js"]
+		}
+	],
+	"web_accessible_resources": ["trades.js"]	
+}
