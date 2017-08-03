@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "Better DeepRoute.com",
-	"version": "2017.8.2",
+	"version": "2017.8.3",
 	"content_scripts": [
 		{
 		"matches": [
@@ -9,7 +9,7 @@
 			"http://deeproute.com/*?js=freeagents*",
 			"http://deeproute.com/*?js=trades*"
 			],
-		"js": ["jquery-3.2.1.min.js","embed_salary.js","replace_bday_with_age.js"]
+		"js": ["jquery-3.2.1.min.js","replace_bday_with_age.js"]
 		},
 		{
 		"matches": [
