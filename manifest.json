@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "Better DeepRoute.com",
-	"version": "2017.8.3",
+	"version": "2017.803",
 	"content_scripts": [
 		{
 		"matches": [
