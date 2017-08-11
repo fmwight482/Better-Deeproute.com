@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "Better DeepRoute.com",
-	"version": "2017.803",
+	"version": "2017.811",
 	"content_scripts": [
 		{
 		"matches": [
@@ -21,10 +21,6 @@
 		{
 		"matches": ["http://deeproute.com/*?js=oneplayer*"],
 		"js": ["jquery-3.2.1.min.js", "oneplayer.js"]
-		},
-		{
-			"matches": ["http://deeproute.com/*?js=rosters*"],
-			"js": ["jquery-3.2.1.min.js", "undo_roster_cut.js"]
 		},
 		{
 		"matches": [
