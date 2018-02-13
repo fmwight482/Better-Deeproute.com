@@ -31,11 +31,23 @@ function downloadCSV(){
     start += length;
   }
 
+  //track the number of points each team has scored
+  away_score = 0;
+  home_score = 0;
+
   //loop through each section
   for(i=0;i<$stop_list.length;i++){
     
     //get list of elements to read
     $rows = $start.nextUntil($stop_list.eq(i));
+
+    // check for score ticker
+    if ($rows.find('td[bgcolor="#eeee99"]').length == 1) {
+      // I think I can extract the points scored by the away team (first) and home team (second) from the score ticker
+      // The problem is associating them with abbreviations in a meaningful way
+
+      //alert("Found score ticker!");
+    }
     
     //check for valid play
     if($rows.find('td:contains("- The ball is snapped to")').length == 1){
@@ -53,7 +65,7 @@ function downloadCSV(){
       down = snap[1].split('(')[1].split('and')[0].trim();
       dist = snap[1].split('(')[1].split(';')[0].split('and')[1].trim();    
       yard_line = snap[1].split(';')[1].split(')')[0].trim();
-      // score = ??????       
+      // score = ??????
       
       //get playcalls
       plays = $rows.find('td:contains("Offensive Package Was :")').text().split('Offensive Package Was :')[1];
